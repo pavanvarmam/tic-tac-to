@@ -1,0 +1,87 @@
+body{
+    background-color: lightcyan;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#main{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.game-header{
+    text-align: center;
+    color: green;
+    margin-bottom: 0;
+}
+
+.game-section{
+    display: flex;
+    justify-content: center;
+}
+
+.game-table{
+    width: 350px;
+    height: 350px;
+    background-color: black;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0.05rem;
+}
+
+.game-table>div{
+    background-color: lightcyan;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+    color: red;
+    text-transform: uppercase;
+}
+
+.game-table>div:hover{
+    background-color: lightblue;
+}
+
+.replay-div{
+    text-align: center;
+}
+
+.replay-btn{
+    padding: 10px;
+    background-color: blue;
+    color: white;
+    font-size: 1.5rem;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.score{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+}
+
+.score-header{
+    grid-column-start: 1;
+    grid-column-end: -1;
+    text-align: center;
+    margin: 0;
+    color: red;
+}
+
+.p-1,.p-2{
+    text-align: center;
+}
+
+.p-1>h3,.p-2>h3{
+    color: blue;
+    font-size: 1.3rem;
+}
+
+.p-1>p,.p-2>p{
+    color: darkolivegreen;
+}
