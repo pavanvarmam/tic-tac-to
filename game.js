@@ -1,7 +1,7 @@
 const game = {
     moves : 0,
     turn : 1,
-    outOfMoves : flase,
+    outOfMoves : false,
     getElementID(id){
         let element = document.getElementById(id);
         return element;
