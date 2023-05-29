@@ -1,6 +1,7 @@
 const game = {
     moves : 0,
     turn : 1,
+    outOfMoves : flase,
     getElementID(id){
         let element = document.getElementById(id);
         return element;
@@ -124,6 +125,9 @@ let clickBox = (id) => {
             }
         }
         if(game.moves>=9){
+            if(game.outOfMoves){
+             return ;   
+            }else{
                 gameResults.playerResults[0].draw++;
                 gameResults.playerResults[1].draw++;
 
@@ -136,6 +140,8 @@ let clickBox = (id) => {
                 game.getElementClass('.p-2-draw').innerHTML = `Draw : ${gameResults.playerResults[1].draw}`;
 
                 resetObj.resetAll();
+                game.outOfMoves = true;
+            }
         }
     }
 }
@@ -173,6 +179,7 @@ let isgetMatchedO = () => {
 game.getElementClass('.replay-btn').onclick = () =>
 {
     resetObj.resetBox();
+    game.outOfMoves = false;
 }
 
 
