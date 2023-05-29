@@ -126,7 +126,7 @@ let clickBox = (id) => {
         }
         if(game.moves>=9){
             if(game.outOfMoves){
-             return ;   
+                return;
             }else{
                 gameResults.playerResults[0].draw++;
                 gameResults.playerResults[1].draw++;
